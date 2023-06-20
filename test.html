@@ -22,6 +22,7 @@
         position: fixed; 
         bottom: 0; 
         z-index: 0;
+        text-align: center;
     }
 
     .adClosed div{
@@ -43,6 +44,48 @@
 
     .adClosed{
         background-color: white;
+    }
+
+    .adClosed h2{
+        color: #a1a1a1;
+        font-weight: normal;
+    }
+    .adClosed h2 b{
+        color: #a0a0a0;
+        font-weight: bold;
+    }
+
+    .adClosed a{
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 10px;
+        box-shadow: -1px 1px 5px -1px rgba(53,51,51,0.56);
+    }
+
+    .adClosed svg{
+        width: 24px;
+        height: 24px;
+        top: 50px;
+        left: -330px;
+    }
+    
+    .adClosed svg{
+        cursor: pointer;
+    }
+
+    #reportAd{
+        background-color: #4285F5;
+        color: white;
+    }
+    #reportAd:hover{
+        background-color: #317cff;
+    }
+
+    #whyAd{
+        color: black;
+    }
+    #whyAd:hover{
+        background-color: #f1f1f1;
     }
 
     .adbox svg:hover{
@@ -71,9 +114,15 @@
 
         <div class="adClosed">
             <div>
-                <p> report this ad  </p>
-                <button> Ok </button>
-                <button> Cancel </button>
+                <svg id="reAds" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12l14 0"></path>
+                    <path d="M5 12l6 6"></path>
+                    <path d="M5 12l6 -6"></path>
+                 </svg>
+                <h2> Ads by <b> Gogol </b>  </h2>
+                <a href="https://developers.google.com/google-ads/api/docs/reporting/overview" id="reportAd"> Report this ad </a>
+                <a href="https://ads.google.com/intl/fr_MG/home/faq/" id="whyAd"> Why this ad? &#9432; </a>
             </div>
         </div>
         
@@ -186,13 +235,21 @@
             clearInterval(intervalAds);
             adbox.forEach(ad => {
                 ad.style.display = "none"
-                console.log(ad);
             });   
         }
 
         let svgs = document.querySelectorAll("#adBigBox > div > svg");
         svgs.forEach(svg => {
             svg.addEventListener("click", dispose_ads);
+        });
+
+        let reAd = document.getElementById("reAds");
+
+        reAd.addEventListener('click', ()=>{
+            intervalAds = setInterval(show_ads, 1000);
+            adbox.forEach(ad => {
+                ad.style.display = "block"
+            }); 
         });
 
     </script>
