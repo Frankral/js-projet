@@ -139,3 +139,100 @@ section button:hover{
 #equa3mod input{
     width: 80px;
 }
+
+
+
+
+/* ads css */
+
+#adBigBox{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.adbox, .adClosed{
+    position: fixed; 
+    bottom: 0; 
+    z-index: 0;
+    text-align: center;
+}
+
+.adClosed div{
+    position: relative;
+    bottom: 40px;
+}
+
+.adbox svg, .adClosed svg{
+    position: relative; 
+    bottom: 80px; 
+    left: 700px; 
+    z-index: 2;
+    color: #6BB7D2;
+    aspect-ratio: 1 / 1;
+    width: 15px;
+    height: 15px;
+}
+
+.adbox svg{
+    background-color: white;
+}
+
+.adClosed{
+    background-color: #FAF9FA;
+    padding: 0px 200px 0px 190px;
+    /* display: none; */
+    height: 100px;
+    margin: 0px -20px 3px 0px;
+}
+
+.adClosed h2{
+    color: #a1a1a1;
+    font-weight: normal;
+}
+.adClosed h2 b{
+    color: #a0a0a0;
+    font-weight: bold;
+}
+
+.adClosed a{
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 10px;
+    box-shadow: -1px 1px 5px -1px rgba(53,51,51,0.56);
+}
+
+.adClosed svg{
+    width: 24px;
+    height: 24px;
+    top: 45px;
+    left: -330px;
+}
+
+.adClosed svg{
+    cursor: pointer;
+}
+
+#reportAd{
+    background-color: #4285F5;
+    color: white;
+}
+#reportAd:hover{
+    background-color: #317cff;
+}
+
+#whyAd{
+    color: black;
+}
+#whyAd:hover{
+    background-color: #f1f1f1;
+}
+
+.adbox svg:hover{
+    cursor: pointer;
+}
+
+.adbox img, .adClosed img{
+    width: 700px;
+    height: 100px;
+}

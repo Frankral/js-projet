@@ -165,3 +165,46 @@ sys3send.addEventListener('click', ()=>{
         rep3sys.innerHTML = "Aucune solution";
     }
 });
+
+
+
+
+
+// advertisement
+let adbox = document.querySelectorAll(".adbox");
+let adclosed = document.getElementsByClassName("adClosed");
+
+let i = 0;
+function show_ads(){
+    if(i > 0) adbox[i-1].style.zIndex = 0;
+    else adbox[9].style.zIndex = 0;
+    adbox[i].style.zIndex = 10;
+    i++;
+    if(i >= 10) i = 0;
+}
+
+let intervalAds = setInterval(show_ads, 1000);
+
+
+function dispose_ads(){
+    clearInterval(intervalAds);
+    adbox.forEach(ad => {
+        ad.style.display = "none"
+        adclosed[0].style.display = "block";
+    });   
+}
+
+let svgs = document.querySelectorAll("#adBigBox > div > svg");
+svgs.forEach(svg => {
+    svg.addEventListener("click", dispose_ads);
+});
+
+let reAd = document.getElementById("reAds");
+
+reAd.addEventListener('click', ()=>{
+    intervalAds = setInterval(show_ads, 1000);
+    adbox.forEach(ad => {
+        ad.style.display = "block";
+        adclosed[0].style.display = "none";
+    }); 
+});
