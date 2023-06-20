@@ -1,0 +1,141 @@
+:root{
+    --color-bg: #131316;
+    --color-fg: #ffffff;
+    --font-1: Verdana, sans-serif;
+    --font-2: Georgia, serif;
+}
+
+body{
+    font-family: var(--font-1);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    /* padding: 0; */
+    /* margin: 0; */
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+section button{
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+    border: none;
+    box-shadow: none;
+    font-size: large;
+    padding: 10px 25px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s;
+}
+/* section button span{
+    width: 100%;
+    height: 100%; 
+    padding: 10px 25px;
+} */
+
+section button::before, 
+section button::after
+{
+    content: '';
+    background-color: var(--color-fg);
+    position: absolute;
+    width: 3px;
+    height: 0;
+    transition: all 0.5s;
+}
+section button::before{
+    top: 0;
+    left: 0;
+}
+section button::after{
+    top: 0;
+    right: 0;
+}
+
+section button span::before, 
+section button span::after
+{
+    content: '';
+    background-color: var(--color-fg);
+    position: absolute;
+    width: 0;
+    height: 3px;
+    transition: all 0.5s;
+}
+section button span::before{
+    top: 0;
+    left: 0;
+}
+section button span::after{
+    bottom: 0;
+    right: 0;
+}
+
+
+section button:hover::before, 
+section button:hover::after
+{
+    height: 100%;
+}
+section button:hover > span::before,
+section button:hover > span::after
+{
+    width: 100%;
+}
+section button:hover{
+    cursor: pointer;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+
+
+
+.hidden{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 2s, opacity 2s;
+  }
+  
+  .show{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+.modal{
+    position: fixed;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+.modalContent{
+    background-color: #ffffff;
+    color: #131316;
+    padding: 25px;
+    text-align: center;
+    max-width: 25%;
+}
+
+.close{
+    text-align: end;
+}
+
+.close svg:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#equa3mod input{
+    width: 80px;
+}

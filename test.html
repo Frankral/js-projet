@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #txt{
+        transition: all 1s;
+    }
+</style>
+
+<body>
+    <form action="">
+        <!-- <select name="" id="select"> -->
+            <!-- <option value="2">2</option> -->
+            <!-- <option value="4">4</option> -->
+            <!-- <option value="6">6</option> -->
+            <!-- <option value="8">8</option> -->
+            <!-- <option value="10">10</option> -->
+        <!-- </select> -->
+        <input type="text" id="txt">
+    </form>
+    
+    <script>
+        // let sel = document.getElementById("select");
+        // sel.addEventListener('change', ()=>{
+        //     console.log(sel.options[sel.selectedIndex].value);
+        // });
+
+        txt.addEventListener("focus", ()=>{
+            txt.blur();
+            rndx = Math.random(500, 500) * 1000;
+            rndy = Math.random(500, 500) * 1000;
+            txt.style = "margin-left: "+ rndx + "px; margin-top: " + rndy + "px";
+        });
+
+    </script>
+</body>
+</html>
