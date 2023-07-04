@@ -174,6 +174,7 @@ sys3send.addEventListener('click', ()=>{
 let adbox = document.querySelectorAll(".adbox");
 let adclosed = document.getElementsByClassName("adClosed");
 let adbigbox = document.getElementById('adBigBox');
+let adcloser = document.querySelectorAll('.adCloser');
 
 let i = 0;
 function show_ads(){
@@ -185,7 +186,12 @@ function show_ads(){
 }
 
 function loop_ads(){
+    adbox.forEach(ad => {
+        ad.style.display = "block";
+        adclosed[0].style.display = "none";
+    }); 
     return setInterval(show_ads, 1000);
+
 }
 
 
@@ -214,8 +220,14 @@ let reAd = document.getElementById("reAds");
 
 reAd.addEventListener('click', ()=>{
     intervalAds = loop_ads();
-    adbox.forEach(ad => {
-        ad.style.display = "block";
-        adclosed[0].style.display = "none";
-    }); 
+});
+
+adcloser.forEach((elmt)=>{
+    elmt.addEventListener('click', ()=>{
+        adbigbox.style.display = 'none';
+        setTimeout(()=>{
+            intervalAds = loop_ads();
+            adbigbox.style.display = 'flex';
+        }, 10000);
+    });
 });

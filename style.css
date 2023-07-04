@@ -239,6 +239,7 @@ section button:hover{
     bottom: 40px;
 }
 
+
 .adbox svg, .adClosed svg{
     position: relative; 
     bottom: 80px; 
@@ -295,12 +296,14 @@ section button:hover{
 }
 #reportAd:hover{
     background-color: #317cff;
+    cursor: pointer;
 }
 
 #whyAd{
     color: black;
 }
 #whyAd:hover{
+    cursor: pointer;
     background-color: #f1f1f1;
 }
 
