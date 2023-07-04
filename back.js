@@ -112,11 +112,11 @@ class Sys3Resolver{
     }
 
     resolve_cramer(){
-        let delta = this.a[2]*this.b[1]*this.c[0] + this.b[2]*this.c[1]*this.a[0] + this.c[2]*this.a[1]*this.b[0] - this.a[0]*this.b[1]*this.c[2] - this.b[0]*this.c[1]*this.a[2] - this.c[0]*this.a[1]*this.b[2];
+        let delta = this.a[0]*this.b[1]*this.c[2] + this.b[0]*this.c[1]*this.a[2] + this.c[0]*this.a[1]*this.b[2] - this.a[2]*this.b[1]*this.c[0] - this.b[2]*this.c[1]*this.a[0] - this.c[2]*this.a[1]*this.b[0];
         if(delta != 0){
-            let deltaz = this.a[2]*this.b[1]*this.d[0] + this.b[2]*this.d[1]*this.a[0] + this.d[2]*this.a[1]*this.b[0] - this.a[0]*this.b[1]*this.d[2] - this.b[0]*this.d[1]*this.a[2] - this.d[0]*this.a[1]*this.b[2];
-            let deltay = this.a[2]*this.d[1]*this.c[0] + this.d[2]*this.c[1]*this.a[0] + this.c[2]*this.a[1]*this.d[0] - this.a[0]*this.d[1]*this.c[2] - this.d[0]*this.c[1]*this.a[2] - this.c[0]*this.a[1]*this.d[2];
-            let deltax = this.d[2]*this.b[1]*this.c[0] + this.d[2]*this.c[1]*this.d[0] + this.c[2]*this.d[1]*this.b[0] - this.d[0]*this.b[1]*this.c[2] - this.b[0]*this.c[1]*this.d[2] - this.c[0]*this.d[1]*this.b[2];
+            let deltaz = this.a[0]*this.b[1]*this.d[2] + this.b[0]*this.d[1]*this.a[2] + this.d[0]*this.a[1]*this.b[2] - this.a[2]*this.b[1]*this.d[0] - this.b[2]*this.d[1]*this.a[0] - this.d[2]*this.a[1]*this.b[0];
+            let deltay = this.a[0]*this.d[1]*this.c[2] + this.d[0]*this.c[1]*this.a[2] + this.c[0]*this.a[1]*this.d[2] - this.a[2]*this.d[1]*this.c[0] - this.d[2]*this.c[1]*this.a[0] - this.c[2]*this.a[1]*this.d[0];
+            let deltax = this.d[0]*this.b[1]*this.c[2] + this.b[0]*this.c[1]*this.d[2] + this.c[0]*this.d[1]*this.b[2] - this.d[2]*this.b[1]*this.c[0] - this.b[2]*this.c[1]*this.d[0] - this.c[2]*this.d[1]*this.b[0]; 
             return [(deltax/delta).toFixed(2), (deltay/delta).toFixed(2), (deltaz/delta).toFixed(2)];
         }
         return [];
