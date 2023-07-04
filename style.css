@@ -201,7 +201,18 @@ section button:hover{
 }
 
 #equa3mod input{
-    width: 80px;
+    width: 50px;
+}
+
+#form3sys{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+#form3sys div{
+    display: flex;
+    flex-direction: column;
 }
 
 
