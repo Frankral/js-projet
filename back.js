@@ -117,7 +117,7 @@ class Sys3Resolver{
             let deltaz = this.a[2]*this.b[1]*this.d[0] + this.b[2]*this.d[1]*this.a[0] + this.d[2]*this.a[1]*this.b[0] - this.a[0]*this.b[1]*this.d[2] - this.b[0]*this.d[1]*this.a[2] - this.d[0]*this.a[1]*this.b[2];
             let deltay = this.a[2]*this.d[1]*this.c[0] + this.d[2]*this.c[1]*this.a[0] + this.c[2]*this.a[1]*this.d[0] - this.a[0]*this.d[1]*this.c[2] - this.d[0]*this.c[1]*this.a[2] - this.c[0]*this.a[1]*this.d[2];
             let deltax = this.d[2]*this.b[1]*this.c[0] + this.d[2]*this.c[1]*this.d[0] + this.c[2]*this.d[1]*this.b[0] - this.d[0]*this.b[1]*this.c[2] - this.b[0]*this.c[1]*this.d[2] - this.c[0]*this.d[1]*this.b[2];
-            return [deltax/delta, deltay/delta, deltaz/delta];
+            return [(deltax/delta).toFixed(2), (deltay/delta).toFixed(2), (deltaz/delta).toFixed(2)];
         }
         return [];
 
@@ -173,6 +173,7 @@ sys3send.addEventListener('click', ()=>{
 // advertisement
 let adbox = document.querySelectorAll(".adbox");
 let adclosed = document.getElementsByClassName("adClosed");
+let adbigbox = document.getElementById('adBigBox');
 
 let i = 0;
 function show_ads(){
@@ -183,7 +184,17 @@ function show_ads(){
     if(i >= 10) i = 0;
 }
 
-let intervalAds = setInterval(show_ads, 1000);
+function loop_ads(){
+    return setInterval(show_ads, 1000);
+}
+
+
+let intervalAds;
+
+setTimeout(()=>{
+    intervalAds = loop_ads();
+    adbigbox.style.display = 'flex';
+}, 3000);
 
 
 function dispose_ads(){
@@ -202,7 +213,7 @@ svgs.forEach(svg => {
 let reAd = document.getElementById("reAds");
 
 reAd.addEventListener('click', ()=>{
-    intervalAds = setInterval(show_ads, 1000);
+    intervalAds = loop_ads();
     adbox.forEach(ad => {
         ad.style.display = "block";
         adclosed[0].style.display = "none";

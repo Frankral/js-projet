@@ -146,9 +146,10 @@ section button:hover{
 /* ads css */
 
 #adBigBox{
-    display: flex; 
+    display: none; 
     justify-content: center; 
     align-items: center;
+    transition: all 1s;
 }
 
 .adbox, .adClosed{
