@@ -112,3 +112,20 @@ hiddenElements.forEach((el) => observer.observe(el));
   });
 
 
+  // mode switchin
+  let root = document.querySelector(':root');
+  let checkbox = document.getElementById('check');
+  function change_mode(){
+      if(checkbox.checked){
+          root.style.setProperty('--color-bg', '#eff5f4');
+          root.style.setProperty('--color-fg', '#272b3f');
+      }
+      else{
+          root.style.setProperty('--color-bg', '#272b3f');
+          root.style.setProperty('--color-fg', '#eff5f4');
+      }
+  }
+
+  checkbox.addEventListener('click', change_mode);
+
+

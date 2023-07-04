@@ -1,6 +1,6 @@
 :root{
-    --color-bg: #131316;
-    --color-fg: #ffffff;
+    --color-bg: #272b3f;
+    --color-fg: #eff5f4;
     --font-1: Verdana, sans-serif;
     --font-2: Georgia, serif;
 }
@@ -9,9 +9,72 @@ body{
     font-family: var(--font-1);
     background-color: var(--color-bg);
     color: var(--color-fg);
-    /* padding: 0; */
-    /* margin: 0; */
+    transition: all 1s;
 }
+
+.mode{
+    z-index: 1;
+    position:fixed;
+    top: 1;
+    left: 1;
+}
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 68px;
+    height: 30px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.switch input {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 0;
+    height: 0;
+}
+
+.switch input + span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    background: #272b3f;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+                inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.switch input:checked + span {
+    background: #ebebeb; 
+}
+
+.switch input + span:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(180deg, #777, #3a3a3a);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all .5s;
+}
+
+.switch input:checked + span:before {
+    left: 34px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+
+}
+
+
+/*------------------------------------------*/
+
 
 section{
     display: grid;
@@ -120,11 +183,12 @@ section button:hover{
 
 
 .modalContent{
-    background-color: #ffffff;
-    color: #131316;
+    background-color: #eff5f4;
+    color: #272b3f;
     padding: 25px;
     text-align: center;
     max-width: 25%;
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.5);
 }
 
 .close{
