@@ -15,7 +15,7 @@ function getValueForm(form, rep){
     for( const [key, value] of frmdt ){
         if(value == ""){
             rep.innerHTML = "Aucune solution, veuillez remplir les champs correctement";
-            return;
+            return [];
         } else{
             data.push(value);
         }
@@ -25,6 +25,9 @@ function getValueForm(form, rep){
 
 
 
+
+
+/*----------------------------------------------------------------------------------------------------------*/
 // equation du second degre
 
 class SecondResolver{
@@ -63,14 +66,16 @@ const reset2deg = document.getElementById('reset2deg');
 
 sender.addEventListener('click', ()=>{
     let data = getValueForm(form2, equa2rep);
-    const sres = new SecondResolver(data[0], data[1], data[2]);
-    let val = sres.resolve();
-    if(val.length == 0){
-        equa2rep.innerHTML = "Aucune solution";
-    } else if(val.length == 1){
-        equa2rep.innerHTML = "x: " +  val[0];
-    } else{
-        equa2rep.innerHTML = "x': " +  val[0] + "<br/>x\":" + val[1];
+    if(data.length > 0){
+        const sres = new SecondResolver(data[0], data[1], data[2]);
+        let val = sres.resolve();
+        if(val.length == 0){
+            equa2rep.innerHTML = "Aucune solution";
+        } else if(val.length == 1){
+            equa2rep.innerHTML = "x: " +  val[0];
+        } else{
+            equa2rep.innerHTML = "x': " +  val[0] + "<br/>x\":" + val[1];
+        }
     }
 });
 
@@ -82,8 +87,13 @@ reset2deg.addEventListener("click", ()=>{
     equa2a.innerHTML = 'a';
     equa2b.innerHTML = '+b';
     equa2c.innerHTML =  '+c';
+    equa2rep.innerHTML = '';
 });
 
+
+
+
+/*---------------------------------------------------------------------------------------------------*/
 // Systeme d'equation a trois inconnus
 
 class Sys3Resolver{
@@ -162,7 +172,7 @@ resetSys3.addEventListener('click', ()=>{
     val3a[0].innerHTML = 'a';val3b[0].innerHTML = '+b';val3c[0].innerHTML = '+c';val3d[0].innerHTML = 'd';
     val3a[1].innerHTML = 'a\'';val3b[1].innerHTML = '+b\'';val3c[1].innerHTML = '+c\'';val3d[1].innerHTML = 'd\'';
     val3a[2].innerHTML = 'a\"';val3b[2].innerHTML = '+b\"';val3c[2].innerHTML = '+c\"';val3d[2].innerHTML = 'd\"';
-
+    rep3sys.innerHTML = '';
 });
 
 sys3send.addEventListener('click', ()=>{
@@ -182,7 +192,7 @@ sys3send.addEventListener('click', ()=>{
 
 
 
-
+/*------------------------------------------------------------------------------------*/
 // advertisement
 let adbox = document.querySelectorAll(".adbox");
 let adclosed = document.getElementsByClassName("adClosed");
