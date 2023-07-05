@@ -12,7 +12,7 @@
 
     <div class="mode">
         <label class="switch">
-            <input type="checkbox" id="check" onclick="change_mode()">
+            <input type="checkbox" id="check">
             <span></span>
         </label>
     </div>
@@ -45,6 +45,7 @@
                         <input type="number" id="c2" name="equa2c" required>
                     </div>
                     <div>
+                        <button type="reset" id="reset2deg"> reset</button>
                         <button type="button" id="2DegSender"> Resoudre </button>
                     </div>
                 </form> 
@@ -72,66 +73,68 @@
                         <p> <span class="a3val">a"</span>x <span class="b3val">+b"</span>y <span class="c3val">+c"</span>z = <span class="d3val">d"</span> </p>
                     </div>
                     <form id="form3sys">
-                        <div>
+                        <div id="form3sys_elmt">
                             <div>
-                                <label for="a3_1"> a: </label>
-                            <input type="number" id="a3_1" name="a3_1" class="a3" required>
-
+                                <div>
+                                    <label for="a3_1"> a: </label>
+                                <input type="number" id="a3_1" name="a3_1" class="a3" required>
+    
+                                </div>
+                                <div>
+                                    <label for="a3_2"> a': </label>
+                                    <input type="number" id="a3_2" name="a3_2" class="a3" required>
+                                </div>
+                                <div>
+                                    <label for="a3_3"> a": </label>
+                                    <input type="number" id="a3_3" name="a3_3" class="a3" required>
+                                </div>                                                    
                             </div>
                             <div>
-                                <label for="a3_2"> a': </label>
-                                <input type="number" id="a3_2" name="a3_2" class="a3" required>
+                                <div>
+                                    <label for="b3_1"> b: </label>
+                                    <input type="number" id="b3_1" name="b3_1" class="b3" required>
+                                </div>
+                                <div>
+                                    <label for="b3_2"> b': </label>
+                                    <input type="number" id="b3_2" name="b3_2" class="b3" required>
+                                </div>
+                                <div>
+                                    <label for="b3_3"> b": </label>
+                                    <input type="number" id="b3_3" name="b3_3" class="b3" required>
+                                </div>
                             </div>
                             <div>
-                                <label for="a3_3"> a": </label>
-                                <input type="number" id="a3_3" name="a3_3" class="a3" required>
-                            </div>                                                    
+                                <div>
+                                    <label for="c3_1"> c: </label>
+                                    <input type="number" id="c3_1" name="c3_1" class="c3" required>
+                                </div>
+                                <div>
+                                    <label for="c3_2"> c': </label>
+                                    <input type="number" id="c3_2" name="c3_2" class="c3" required>
+                                </div>
+                                <div>
+                                    <label for="c3_3"> c": </label>
+                                    <input type="number" id="c3_3" name="c3_3" class="c3" required>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="d3_1"> d: </label>
+                                    <input type="number" id="d3_1" name="d3_1" class="d3" required>
+                                </div>
+                                <div>
+                                    <label for="d3_2"> d': </label>
+                                    <input type="number" id="d3_2" name="d3_2" class="d3" required>
+                                </div>
+                                <div>
+                                    <label for="d3_3"> d": </label>
+                                    <input type="number" id="d3_3" name="d3_3" class="d3" required>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <div>
-                                <label for="b3_1"> b: </label>
-                                <input type="number" id="b3_1" name="b3_1" class="b3" required>
-                            </div>
-                            <div>
-                                <label for="b3_2"> b': </label>
-                                <input type="number" id="b3_2" name="b3_2" class="b3" required>
-                            </div>
-                            <div>
-                                <label for="b3_3"> b": </label>
-                                <input type="number" id="b3_3" name="b3_3" class="b3" required>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <label for="c3_1"> c: </label>
-                                <input type="number" id="c3_1" name="c3_1" class="c3" required>
-                            </div>
-                            <div>
-                                <label for="c3_2"> c': </label>
-                                <input type="number" id="c3_2" name="c3_2" class="c3" required>
-                            </div>
-                            <div>
-                                <label for="c3_3"> c": </label>
-                                <input type="number" id="c3_3" name="c3_3" class="c3" required>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <label for="d3_1"> d: </label>
-                                <input type="number" id="d3_1" name="d3_1" class="d3" required>
-                            </div>
-                            <div>
-                                <label for="d3_2"> d': </label>
-                                <input type="number" id="d3_2" name="d3_2" class="d3" required>
-                            </div>
-                            <div>
-                                <label for="d3_3"> d": </label>
-                                <input type="number" id="d3_3" name="d3_3" class="d3" required>
-                            </div>
-                        </div>
-
+                        <button type="reset" id="resetSys3"> reset</button>
+                        <button type="button" id="Sys3Sender"> Resoudre </button>
                     </form>
-                    <button type="button" id="Sys3Sender"> Resoudre </button>
                     <div id="equa3rep"></div>
                 </div>
 

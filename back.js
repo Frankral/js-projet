@@ -59,6 +59,7 @@ const equa2cf = document.getElementsByName('equa2c');
 const equa2c = document.getElementById('equa2c');
 
 const equa2rep = document.getElementById('equa2rep');
+const reset2deg = document.getElementById('reset2deg');
 
 sender.addEventListener('click', ()=>{
     let data = getValueForm(form2, equa2rep);
@@ -77,7 +78,11 @@ getValueInput(equa2af[0], equa2a, 'a', false);
 getValueInput(equa2bf[0], equa2b, '+b', true);
 getValueInput(equa2cf[0], equa2c, '+c', true);
 
-
+reset2deg.addEventListener("click", ()=>{
+    equa2a.innerHTML = 'a';
+    equa2b.innerHTML = '+b';
+    equa2c.innerHTML =  '+c';
+});
 
 // Systeme d'equation a trois inconnus
 
@@ -135,6 +140,7 @@ let inp3d = document.getElementsByClassName('d3');
 let sys3send = document.getElementById('Sys3Sender');
 let form3 = document.getElementById('form3sys');
 let rep3sys = document.getElementById('equa3rep');
+let resetSys3 = document.getElementById('resetSys3');
 
 getValueInput(inp3a[0], val3a[0], 'a', false);
 getValueInput(inp3a[1], val3a[1], 'a\'', false);
@@ -151,6 +157,13 @@ getValueInput(inp3c[2], val3c[2], '+c\"', true);
 getValueInput(inp3d[0], val3d[0], 'd', false);
 getValueInput(inp3d[1], val3d[1], 'd\'', false);
 getValueInput(inp3d[2], val3d[2], 'd\"', false);
+
+resetSys3.addEventListener('click', ()=>{
+    val3a[0].innerHTML = 'a';val3b[0].innerHTML = '+b';val3c[0].innerHTML = '+c';val3d[0].innerHTML = 'd';
+    val3a[1].innerHTML = 'a\'';val3b[1].innerHTML = '+b\'';val3c[1].innerHTML = '+c\'';val3d[1].innerHTML = 'd\'';
+    val3a[2].innerHTML = 'a\"';val3b[2].innerHTML = '+b\"';val3c[2].innerHTML = '+c\"';val3d[2].innerHTML = 'd\"';
+
+});
 
 sys3send.addEventListener('click', ()=>{
     let data = getValueForm(form3, rep3sys);
