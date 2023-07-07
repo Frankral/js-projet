@@ -27,11 +27,11 @@
                 </svg>
             </div>
             <div>
-                <h2> Resolution de d'équation du second degré </h2>
+                <h2> Résolution de d'équation du second degré </h2>
                 <div class="equa2equa">
                     <span id="equa2a">a</span>x<sup>2</sup> <span id="equa2b">+b</span>x <span id="equa2c">+c</span> = 0
                 </div>
-                <form id="form2deg">
+                <form id="form2deg" autocomplete="off">
                     <div>
                         <label for="a2"> a: </label>
                         <input type="number" id="a2" name="equa2a" required>
@@ -44,9 +44,9 @@
                         <label for="c2"> c: </label>
                         <input type="number" id="c2" name="equa2c" required>
                     </div>
-                    <div>
+                    <div id="e2btn">
                         <button type="reset" id="reset2deg"> reset</button>
-                        <button type="button" id="2DegSender"> Resoudre </button>
+                        <button type="button" id="2DegSender"> Résoudre </button>
                     </div>
                 </form> 
                 <div id="equa2rep"></div>
@@ -66,7 +66,7 @@
 
             </div>
                 <div>
-                    <h2> Resolution de Système d'equation à trois inconnus </h2>
+                    <h2> Résolution de Système d'équation à trois inconnus </h2>
                     <div class="equa3equa">
                         <p> <span class="a3val">a</span>x <span class="b3val">+b</span>y <span class="c3val">+c</span>z = <span class="d3val">d</span> </p>
                         <p> <span class="a3val">a'</span>x <span class="b3val">+b'</span>y <span class="c3val">+c'</span>z = <span class="d3val">d'</span> </p>
@@ -132,8 +132,10 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="reset" id="resetSys3"> reset</button>
-                        <button type="button" id="Sys3Sender"> Resoudre </button>
+                        <div id="e3btn">
+                            <button type="reset" id="resetSys3"> Reset</button>
+                            <button type="button" id="Sys3Sender"> Résoudre </button>
+                        </div>
                     </form>
                     <div id="equa3rep"></div>
                 </div>
@@ -170,7 +172,7 @@
                     <path d="M5 12l6 6"></path>
                     <path d="M5 12l6 -6"></path>
                  </svg>
-                <h2> Ads by <b> Gogol </b>  </h2>
+                <h2> Ads by <b> Google </b>  </h2>
                 <a href="https://developers.google.com/google-ads/api/docs/reporting/overview" target="_blank" id="reportAd" class="adCloser"> Report this ad &#9432; </a>
                 <a id="whyAd" class="adCloser"> Close this ad  </a>
             </div>
@@ -180,70 +182,70 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads1.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads1.webp" alt="image not found"></a>
         </div>
 
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads2.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads2.webp" alt="image not found"></a>
         </div>
 
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads3.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads3.webp" alt="image not found"></a>
         </div>
 
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads4.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads4.webp" alt="image not found"></a>
         </div>
 
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads5.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads5.webp" alt="image not found"></a>
         </div>
         
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads6.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads6.webp" alt="image not found"></a>
         </div>
         
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads7.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads7.webp" alt="image not found"></a>
         </div>
         
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads8.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads8.webp" alt="image not found"></a>
         </div>
 
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads9.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads9.webp" alt="image not found"></a>
         </div>
 
         <div class="adbox">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"/>
             </svg>
-            <a href="https://www.ads.com/" target="_blank"><img src="images/ads10.webp" alt="image not found"></a>
+            <a href="https://ads.google.com/home/" target="_blank"><img src="images/ads10.webp" alt="image not found"></a>
         </div>
     </div>
 

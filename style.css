@@ -13,7 +13,7 @@ body{
 }
 
 .mode{
-    z-index: 1;
+    z-index: 100;
     position:fixed;
     top: 1;
     left: 1;
@@ -215,6 +215,47 @@ section button:hover{
     display: flex;
     flex-direction: column;
 }
+
+#e2btn, #e3btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#e2btn button, #e3btn button{
+    text-transform: capitalize;
+    background-color: #272b3f;
+    color: #eff5f4;
+    border: none;
+    width: 30%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#e2btn button:hover, #e3btn button:hover{
+    cursor: pointer;
+    background-color: #11131d;
+}
+
+#form2deg input, #form3sys input{
+    margin-top: 10px;
+    border: none;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2) inset;
+}
+
+#form2deg input:focus-visible, #form3sys input:focus-visible{
+    outline: 1px solid #9DCCF1;
+    border: 1px solid #9DCCF1;
+    box-shadow: 0px 0px 10px 0px #9DCCF1;
+}   
+
+#form3sys input{
+    margin-top: 0;
+}
+
 
 
 

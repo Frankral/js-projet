@@ -23,6 +23,14 @@ function getValueForm(form, rep){
     return data;
 }
 
+function showFloat(nombre) {
+    if (nombre % 1 === 0) {
+      return nombre.toFixed(0);
+    } else {
+      return nombre.toFixed(3);
+    }
+  }
+
 
 
 
@@ -44,11 +52,11 @@ class SecondResolver{
         }
         else if(delta == 0){
             let rep = (-this.b)/(2*this.a);
-            return [rep.toFixed(2)];
+            return [showFloat(rep)];
         } else{
             let rep1 = (-this.b - Math.sqrt(delta))/(2*this.a);
             let rep2 = (-this.b + Math.sqrt(delta))/(2*this.a);
-            return [rep1.toFixed(2), rep2.toFixed(2)];
+            return [showFloat(rep1), showFloat(rep2)];
         }
     }
 }
@@ -132,7 +140,7 @@ class Sys3Resolver{
             let deltaz = this.a[0]*this.b[1]*this.d[2] + this.b[0]*this.d[1]*this.a[2] + this.d[0]*this.a[1]*this.b[2] - this.a[2]*this.b[1]*this.d[0] - this.b[2]*this.d[1]*this.a[0] - this.d[2]*this.a[1]*this.b[0];
             let deltay = this.a[0]*this.d[1]*this.c[2] + this.d[0]*this.c[1]*this.a[2] + this.c[0]*this.a[1]*this.d[2] - this.a[2]*this.d[1]*this.c[0] - this.d[2]*this.c[1]*this.a[0] - this.c[2]*this.a[1]*this.d[0];
             let deltax = this.d[0]*this.b[1]*this.c[2] + this.b[0]*this.c[1]*this.d[2] + this.c[0]*this.d[1]*this.b[2] - this.d[2]*this.b[1]*this.c[0] - this.b[2]*this.c[1]*this.d[0] - this.c[2]*this.d[1]*this.b[0]; 
-            return [(deltax/delta).toFixed(2), (deltay/delta).toFixed(2), (deltaz/delta).toFixed(2)];
+            return [showFloat(deltax/delta), showFloat(deltay/delta), showFloat(deltaz/delta)];
         }
         return [];
 
@@ -213,7 +221,7 @@ function loop_ads(){
         ad.style.display = "block";
         adclosed[0].style.display = "none";
     }); 
-    return setInterval(show_ads, 3000);
+    return setInterval(show_ads, 1000);
 
 }
 
