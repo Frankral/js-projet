@@ -213,7 +213,7 @@ function loop_ads(){
         ad.style.display = "block";
         adclosed[0].style.display = "none";
     }); 
-    return setInterval(show_ads, 1000);
+    return setInterval(show_ads, 3000);
 
 }
 
