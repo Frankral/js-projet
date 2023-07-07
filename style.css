@@ -3,7 +3,21 @@
     --color-fg: #eff5f4;
     --font-1: Verdana, sans-serif;
     --font-2: Georgia, serif;
+    --scroll-bar: rgba(255,255,255,.2);
 }
+
+html::-webkit-scrollbar {
+    width: .6em; 
+  }
+html::-webkit-scrollbar,
+html::-webkit-scrollbar-thumb {
+    overflow:visible;
+    border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--scroll-bar);
+}
+
 
 body{
     font-family: var(--font-1);

@@ -119,10 +119,12 @@ hiddenElements.forEach((el) => observer.observe(el));
       if(checkbox.checked){
           root.style.setProperty('--color-bg', '#eff5f4');
           root.style.setProperty('--color-fg', '#272b3f');
+          root.style.setProperty('--scroll-bar', 'rgba(0,0,0,.2)');
       }
       else{
           root.style.setProperty('--color-bg', '#272b3f');
           root.style.setProperty('--color-fg', '#eff5f4');
+          root.style.setProperty('--scroll-bar', 'rgba(255,255,255,.2)');
       }
   }
 
